@@ -1,0 +1,7 @@
+.img-thumbnail:hover {
+    transform: scale(1.5);
+  } 
+#design:hover{
+  transform: scale(1.1);
+}
+

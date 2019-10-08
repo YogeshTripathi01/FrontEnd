@@ -1,65 +1,16 @@
-<p>user works!</p>
 
 
-    
-
-
-    
-<!-- <div class="row" style="height:450px;">
-<div class="col-md-12 my-auto side-header"> -->
-<h1>userRegistration</h1>
-
-<!-- </div>
-</div> -->
-
-<div class="container">
-
-    <div class="col-md-6">
-<form [formGroup]="service.formModel">
-
-
-    <div class="form-group required">
-        <label>FirstName</label>
-        <input  class="form-control" formControlName="FirstName">
-        <label class="text-danger" *ngIf="service.formModel.get('FirstName').touched && service.formModel.get('FirstName').errors?.required"  >This field is mandatory</label>        
-    </div>
-    <div class="form-group">
-        <label>LastName</label>
-        <input  class="form-control" formControlName="LastName">        
-    </div>
-    <div class="form-group required">
-        <label>EmailAddress</label>
-        <input  class="form-control" formControlName="EmailAddress">        
-        <label class="text-danger" *ngIf="service.formModel.get('EmailAddress').touched && service.formModel.get('FirstName').errors?.email"  >Invalid Email</label>        
-   
-   
-    </div>
-    <div class="form-group">
-        <label>PhoneNumber</label>
-        <input  class="form-control" formControlName="PhoneNumber">        
-    </div>
-    <div class="form-group required">
-        <label>Password</label>
-        <input  class="form-control" formControlName="Password">        
-    </div>
-    <div class="form-group">
-        <label>ProfilePic</label>
-        <input  class="form-control" formControlName="ProfilePic">        
-    </div>
-    <div class="form-group">
-        <label>Role</label>
-        <input  class="form-control" formControlName="Role">        
-    </div>
-<div class="form-row">
-    <div class="form-group col-md-8 offset-md-2">
-        <button class="btn btn-danger" type="submit" class="btn btn-lg btn-block">Sign Up</button>
-    </div>
+ 
+<div class="wrapper">
+      <div class="wrapped-div">
+            <div class="tab-header">
+                  <h2 routerLink="/user/signin" routerlinkactive='active'>Sign In</h2>
+                  <h2 routerLink="/user/registration" routerlinkactive='active'>Sign Up</h2>             
+            </div>
+            <div class="row">
+                  <div class="col-md-10 offset-md-1">
+                        <router-outlet></router-outlet> 
+                  </div>
+            </div>
+      </div>
 </div>
-
-</form>
-
-
-    </div>
-</div>
-
-      

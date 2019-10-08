@@ -1,0 +1,202 @@
+<ol class="progtrckr" data-progtrckr-steps="5">
+  <li class="progtrckr-done">Order Processing</li>
+  <li class="progtrckr-done">Pre-Production</li>
+  <li class="progtrckr-done">In Production</li>
+  <li class="progtrckr-todo">Shipped</li>
+  <li class="progtrckr-todo">Delivered</li>
+</ol>
+
+<body
+  background="https://thumbs.dreamstime.com/z/phone-messages-martini-glass-fast-payment-icons-set-discount-tags-opened-gift-recycling-signs-vector-header-banner-simple-142456726.jpg">
+  <div class="container">
+    <hr>
+    <div class="row">
+      <aside class="col-sm-6">
+        <p>Payment form1</p>
+        <article class="card">
+          <div class="card-body p-5">
+            <p> <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScef6aT82gbnUrUo-GnMpdXD-lsI5OxKwUpWR0IytNFDvCSQjMaQ"
+                height=90px width=50px>
+              <img src="https://securecdn.pymnts.com/wp-content/uploads/2016/08/creditcards_taxbill_uk.jpg"
+                height="130px" width=120px>
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWaxxYuB_ToPmXuwJkUQc4_57vDmdoz2Gomct8NqNHafxcqxc">
+            </p>
+            <p class="alert alert-success">Smile your are about to shop!!</p>
+            <form role="form">
+              <div class="form-group">
+                <label for="username">Full name (on the card)</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fa fa-user"></i></span>
+                  </div>
+                  <input type="text" class="form-control" name="username" placeholder="" required="">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="cardNumber">Card number</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fa fa-credit-card"></i></span>
+                  </div>
+                  <input type="text" class="form-control" name="cardNumber" placeholder="">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-8">
+                  <div class="form-group">
+                    <label><span class="hidden-xs">Expiration</span> </label>
+                    <div class="form-inline">
+                      <select class="form-control" style="width:45%">
+                        <option>MM</option>
+                        <option>01 - Janiary</option>
+                        <option>02 - February</option>
+                        <option>03 - February</option>
+                      </select>
+                      <span style="width:10%; text-align: center"> / </span>
+                      <select class="form-control" style="width:45%">
+                        <option>YY</option>
+                        <option>2018</option>
+                        <option>2019</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label data-toggle="tooltip" title=""
+                      data-original-title="3 digits code on back side of the card">CVV <i
+                        class="fa fa-question-circle"></i></label>
+                    <input class="form-control" required="" type="text">
+                  </div>
+                </div>
+              </div>
+              <button class="subscribe btn btn-primary btn-block" type="button" (click)="Submit()"> Confirm </button>
+            </form>
+          </div>
+        </article>
+      </aside>  
+      <aside class="col-sm-6">
+        <p>Payment form2</p>
+        <article class="card">
+          <div class="card-body p-5">
+            <ul class="nav bg-light nav-pills rounded nav-fill mb-3" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" data-toggle="pill" href="#nav-tab-card">
+                  <i class="fa fa-credit-card"></i> Credit Card</a></li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#nav-tab-paypal">
+                  <i class="fab fa-paypal"></i> Paypal</a></li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#nav-tab-bank">
+                  <i class="fa fa-university"></i> Bank Transfer</a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="nav-tab-card">
+                <p class="alert alert-success">Select the CARD.</p>
+                <form role="form">
+                  <div class="form-group">
+                    <label for="username">Full name (on the card)</label>
+                    <input type="text" class="form-control" name="username" placeholder="" required="">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="cardNumber">Card number</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" name="cardNumber" placeholder="">
+                      <div class="input-group-append">
+                        <span class="input-group-text text-muted">
+                          <i class="fab fa-cc-visa"></i>   <i class="fab fa-cc-amex"></i>  
+                          <i class="fab fa-cc-mastercard"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-8">
+                      <div class="form-group">
+                        <label><span class="hidden-xs">Expiration</span> </label>
+                        <div class="input-group">
+                          <input type="number" class="form-control" placeholder="MM" name="">
+                          <input type="number" class="form-control" placeholder="YY" name="">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="form-group">
+                        <label data-toggle="tooltip" title=""
+                          data-original-title="3 digits code on back side of the card">CVV <i
+                            class="fa fa-question-circle"></i></label>
+                        <input type="number" class="form-control" required="">
+                      </div>
+                    </div>
+                  </div>
+                  <button class="subscribe btn btn-primary btn-block" type="button"> Confirm </button>
+                  <button><a [routerLink]="['/landingpage']" routerLinkActive="router-link-active">continue shopping
+                    </a>
+                  </button>
+                </form>
+              </div>
+              <div class="tab-pane fade" id="nav-tab-paypal">
+                <p>Paypal is easiest way to pay online</p>
+                <p>
+                  <button type="button" class="btn btn-primary"> <i class="fab fa-paypal"></i> Log in my Paypal
+                  </button>
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+        </article>
+
+
+      </aside>
+    </div>
+
+  </div><br><br>
+
+
+</body>
+<br><br>
+<article class="bg-secondary mb-3">
+  <div class="card-body text-center">
+    <div class="row">
+      <div class="paymentCont">
+        <div class="headingWrap">
+
+          <h3 class="headingTop text-center">Select Your Payment Method</h3>
+          <p class="text-center">You are at the Payment page... </p>
+        </div>
+        <div class="paymentWrap">
+          <div class="btn-group paymentBtnGroup btn-group-justified" data-toggle="buttons">
+            <label class="btn paymentMethod active">
+              <div class="method visa"></div>
+              <input type="radio" name="options" checked>
+            </label>
+            <label class="btn paymentMethod">
+              <div class="method master-card"></div>
+              <input type="radio" name="options">
+            </label>
+            <label class="btn paymentMethod">
+              <div class="method amex"></div>
+            </label>
+          </div>
+        </div>
+        <div class="footerNavWrap creditcards_taxbill_uk">
+          <a [routerLink]="['/landingpage']" routerLinkActive="router-link-active">continue shopping </a>
+          <div class="btn btn-success pull-right btn-fyi">CHECKOUT<span
+              class="glyphicon glyphicon-chevron-right"></span></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <br><br> <br>
+  <br>
+</article>

@@ -1,0 +1,30 @@
+<div class="jumbotron" >
+    <h3 class="font-weight-bolder text-success"> Update Products </h3>
+  <div class="container">
+  <form (ngSubmit)="editProduct(us)" #us="ngForm" >
+      <div class="form-group col-md-6" >
+          <label for="name">Product ID: </label>
+          <input type="text" class="form-control" [(ngModel)] ="id" id="productId" name="productId"   />
+        </div>
+  <div class="form-group col-md-6" >
+    <label for="name">Product Name: </label>
+    <input type="text" class="form-control"[(ngModel)] ="model.product_Name" id="product_Name" name="product_Name"   />
+  </div>
+  <div class="form-group col-md-6">
+    <label for="description">Description: </label>
+    <input type="text" class="form-control" id="product_Description" name="product_Description" [(ngModel)] ="model.product_Description"/>
+  </div>
+  <div class="form-group col-md-6">
+    <label for="price">Price: </label>
+    <input type="number" class="form-control" id="product_Price" name="product_Price" [(ngModel)] ="model.product_Price"/>
+  </div>
+  <div class="form-group col-md-6">
+    <label for="imagePath"> Product Image URL : </label>
+    <input type="text" class="form-control" id="product_Image" name= "product_Image" [(ngModel)] ="model.product_Image"/>
+  </div>
+  <div class="form-group floatRight col-md-3">
+    <input type="submit"  value=Submit />
+  </div>
+  </form>
+  </div>
+  </div>

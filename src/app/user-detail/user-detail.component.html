@@ -1,0 +1,24 @@
+<div class="container">  
+<form (ngSubmit)="editUser(us)" #us="ngForm"> 
+    <div class="form-group col-md-6">
+        <label for="firstName">firstname</label>
+        <input type="text" class="form-control" [(ngModel)]="firstName" id="firstName" name="firstName" />
+    </div>
+    <div class="form-group col-md-6">
+        <label for="lastName">lastname</label>
+        <input type="text" class="form-control" [(ngModel)]="lastName" id="lastName" name="lastName" />
+    </div>
+    <div class="form-group col-md-6">
+        <label for="email">email</label>
+        <input type="text" class="form-control" [(ngModel)]="email" id="email" name="email" />
+    </div>
+    <div class="form-group col-md-6">
+            <label for="password">password</label>
+            <input type="text" class="form-control" [(ngModel)]="password" id="password" name="password" />
+        </div>
+<div class="form-group  floatRight col-md-3 ">
+<input type="submit" value=Submit />
+
+</div> 
+</form>
+</div>

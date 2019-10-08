@@ -1,0 +1,74 @@
+<body>
+    <div class="container">
+        <!-- <div style="text-align: center"> -->
+            
+            <form [formGroup]="service.formModel" (submit)="onSubmit()">
+                <!-- <div class="form-group  col-md-6">
+            <label>
+                userId
+            </label>
+            <input type="text" class="form-control" formControlName="userId"> 
+        </div>  -->
+                <div class="form-group col-md-6 required">
+                    <label>
+                        city
+                    </label>
+                    <input type="text" class="form-control" formControlName="city">
+                    <label class="text-danger"
+                        *ngIf="service.formModel.get('city').touched && service.formModel.get('city').errors?.required">
+                        required field.</label>
+                </div>
+                <div class="form-group col-md-6 required">
+                    <label>
+                        pincode
+                    </label>
+                    <input type="number" class="form-control" formControlName="pinCode">
+                    <label class="text-danger"
+                        *ngIf="service.formModel.get('pinCode').touched && service.formModel.get('pinCode').errors?.required">
+                        required field.</label>
+                </div>
+                <div class="form-group col-md-6 required">
+                    <label>
+                        address1
+                    </label>
+                    <input type="text" class="form-control" formControlName="address1">
+                    <label class="text-danger"
+                        *ngIf="service.formModel.get('address1').touched && service.formModel.get('address1').errors?.required">
+                        required field.</label>
+                </div>
+                <div class="form-group col-md-6">
+                    <label>
+                        address2
+                    </label>
+                    <input type="text" class="form-control" formControlName="address2">
+                </div>
+                <div class="form-group col-md-6">
+                    <label>
+                        houseNumber
+                    </label>
+                    <input type="text" class="form-control" formControlName="houseNumber">
+                    <label class="text-danger"
+                        *ngIf="service.formModel.get('houseNumber').touched && service.formModel.get('houseNumber').errors?.required">
+                        required field.</label>
+                </div>
+                <div class="form-group col-md-6">
+                    <label>
+                        Contact Number
+                    </label>
+                    <input type="number" class="form-control" formControlName="contact_Number">
+                    <label class="text-danger"
+                        *ngIf="service.formModel.get('contact_Number').touched && service.formModel.get('contact_Number').errors?.required">
+                        required field.</label> 
+                </div>
+                <div>
+                    <button type="submit" class="btn col-md-6 btn-block" [disabled]="!service.formModel.valid">
+                        AddAddress
+                    </button> <br>
+                </div>
+  
+            </form>
+       
+    </div>
+
+
+</body>

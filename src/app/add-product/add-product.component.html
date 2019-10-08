@@ -1,0 +1,39 @@
+<div class="jumbotron">
+<div class="container">
+    <button class="btn btn-danger">
+        <a [routerLink]="['/product']" routerLinkActive="router-link-active"> back </a>
+    </button>
+    <form [formGroup]="service.formModel" (submit)="onSubmit()">
+        <div class="form-group col-md-6">
+            <label>Product_Name</label>
+            <input type="text" class="form-control" formControlName="Product_Name">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Product_Price</label>
+            <input type="text" class="form-control" formControlName="Product_Price">
+        </div>
+       
+        <div class="form-group col-md-6">
+            <label>Enter Category </label>
+            <select (mouseover)="onsub()" name="Category" id="Category" class="form-control" formControlName="category_Id">
+                <option *ngFor="let c of category" [value]="c.category_Id"> 
+                    {{c.category_Name}}
+                </option>
+            </select>
+        </div>
+        <div class="form-group col-md-6">
+            <label>Product_Image</label>
+            <input type="text" class="form-control" formControlName="Product_Image">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Product_Quantity</label>
+            <input type="text" class="form-control" formControlName="Product_Quantity">
+        </div>
+        <div class="form-row col-md-6">
+            <div class="form-group col-md-8 offset-md-2">
+                <button type="submit" class="btn btn-lg btn-block" (click)="alert()">ADD</button>
+            </div>
+        </div>
+    </form>
+</div>
+</div>

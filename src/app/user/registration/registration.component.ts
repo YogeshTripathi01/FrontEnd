@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/shared/user.service';
+import { Router } from '@angular/router'
+import { SignInComponent } from '../sign-in/sign-in.component';
 
 @Component({
   selector: 'app-registration',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrationComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(public service: UserService, public router: Router) { }
+ 
   ngOnInit() {
+    this.service.formModel.reset();
   }
+     
+  onSubmit() {
+    this.service.register().subscribe(
+
+    );
+    location.reload();
+  }
+  alert() {
+    window.alert('REGISTRATION SUCCESSFULL');
+
+  }
+
 
 }
